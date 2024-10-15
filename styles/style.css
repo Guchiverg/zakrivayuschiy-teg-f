@@ -17,4 +17,12 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font-family, sans-serif);
+  font-variation-settings: 'wght' var(--font-weight-description-card-light);
+  background-color: var(--background-color);
+  color: var(--main-color);
+}
+
+.header__wrapper {
+
 }

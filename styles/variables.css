@@ -1,8 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
-root {
+:root {
     --main-font-family: 'Inter', sans-serif; /*подключение основного шрифта*/
     --accent-font-family: 'PressStart2PRegular', sans-serif; /*подключение акцентного шрифта*/
-    --backgroun-color-light: 
+    --font-weight-name-card-light: 700; /*толщина шрифта (название карточки)*/
+    --font-weight-description-card-light: 400; /*толщина шрифта (описание карточки)*/
+    --theme-color: #FFFFFF; /*цвет темы*/
+    --main-color: #000; /*цвет текста*/
+    --background-color: repeating-linear-gradient
 }
 
