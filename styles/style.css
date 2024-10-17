@@ -73,7 +73,11 @@
   content: "▶";
   position: absolute;
   left: 20px;
-  animation: choice .5s ease-in-out infinite alternate;
+  animation-name: animation;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
 }
 
 .theme-menu__list {
