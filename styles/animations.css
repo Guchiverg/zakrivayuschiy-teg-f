@@ -13,11 +13,93 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+
+.like-icon .core {
+    fill: transparent;
+    transition: fill 0.3s ease;
+  }
+  
+  .like-icon .main-body {
+    fill: transparent;
+    transition: fill 0.5s ease;
+  }
+
+  .like-icon .contour {
+    fill: var(--color-heart, #000000);
+    transition: fill 0.1s linear;
+  }
+  
+  .like-icon:hover .main-body, .like-icon:hover .core {
+    fill: var(--main-color);
+    
+  }
+  
+  .like-icon:active .main-body, .like-icon:active .core {
+    fill: var(--color-heart-active);
+  }
+  
+
+  .like-icon.is-liked .main-body { 
+    fill: var(--color-heart-active);
+    transition: fill 0.5s;
+  }
+
+  .like-icon.is-liked .core {
+    fill: var(--color-heart-active);
+    transition: fill 0.5s;
+  }
+
+  .like-icon.is-liked .contour {
+    fill: var(--color-heart-active);
+    transition: fill 0.5s;
+  }
+
+  .like-icon.is-liked .heart {
+    animation: scaleHeart 0.3s ease-in 0.1s;
+    transform-origin: center;
+  }
+
+  .like-icon.is-liked .sparks {
+    fill: var(--color-heart-active);
+    transition: fill 0.5s;
+}
+
+  .like-icon .sparks {
+    opacity: 0; 
+  }
+  
+  .like-icon.is-liked .sparks {
+    animation: sparkAnimation 0.3s ease-in 0.3s both; 
+  }
+  
+  @keyframes sparkAnimation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1; 
+    }
+    100% {
+      opacity: 0; 
+    }
+  }
+  
+
 @keyframes animation  {
     0% {
         transform: translateX(0);
     }
     100% {
         transform: translateX(4px);
+    }
+}
+
+@keyframes scaleHeart  {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
     }
 }
