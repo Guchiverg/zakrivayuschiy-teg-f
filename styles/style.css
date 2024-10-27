@@ -133,8 +133,14 @@
   mix-blend-mode: hard-light;
   color: var(--main-color);
   font-family: var(--accent-font-family);
-  -webkit-text-stroke: 1px var(--stroke-color);
   opacity: 0.5;
+}
+
+@supports ( (text-stroke: 1px var(--stroke-color)) or (-webkit-text-stroke: 1px var(--stroke-color)) ) {
+  .img_description {
+      -webkit-text-stroke: 1px var(--stroke-color);
+      text-shadow: none;
+  }
 }
 
 .card_wrapper {
