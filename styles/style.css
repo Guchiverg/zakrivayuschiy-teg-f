@@ -4,7 +4,7 @@
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
 ✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__like__button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
@@ -23,13 +23,15 @@
   color: var(--main-color);
   background-image: var(--background-color);
   background-size: cover;
+  background-attachment: fixed;
+
+  margin: 0 auto;
 }
 
 .header {
   background-color: var(--theme-color);
-  width: clamp(43.75rem, 69.167vw - 18.5rem, 23rem);
+  padding-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   /* min-height: 368px; */
-  padding-block-start: 131px;
   border: 2px solid var(--main-color);
   margin: 100px auto;
   display: flex;
@@ -37,6 +39,7 @@
   justify-content: end;
   align-items: center;
   font-family: var(--accent-font-family, sans-serif);
+  width: clamp(43.75rem, 69.167vw - 18.5rem, 23rem);
   gap: 25px;
 }
 
@@ -78,7 +81,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 11px;
   padding-block-end: 20px;
   position: relative;
 }
@@ -115,7 +118,7 @@
 .card__title {
   font-family: var(--main-font-family);
   font-size: 18px;
-  font-variation-settings: "wght" 700;
+  font-variation-settings: "wght" var(--font-weight-title, 700);
   vertical-align: middle;
   display: flex;
   align-items: center;
@@ -134,6 +137,7 @@
   color: var(--main-color);
   font-family: var(--accent-font-family);
   opacity: 0.5;
+  text-shadow: 0 0 1px var(--stroke-color);
 }
 
 @supports ( (text-stroke: 1px var(--stroke-color)) or (-webkit-text-stroke: 1px var(--stroke-color)) ) {
@@ -146,14 +150,17 @@
 .card_wrapper {
   font-family: var(--main-font-family);
   font-size: 18px;
-  font-variation-settings: "wght" 400;
+  font-variation-settings: "wght" var(--font-weight-text, 400);
   line-height: 117%;
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
 }
 
-.card__description {
+/* .card__description {
   margin-block-end: 27px;
-}
+} */
 
 .card__button {
   font-family: var(--accent-font-family);
@@ -162,11 +169,12 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  transition: outline 0.3s ease;
 }
 
 .card__button:focus-visible {
   outline: 2px solid var(--main-color);
-  transition: outline 0.3s ease;
+ 
 }
 
 .card__like__button {
@@ -176,12 +184,13 @@
   height: 38px;
   position: relative;
   cursor: pointer;
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .card__like__button:focus {
   outline: none;
   box-shadow: 2px 2px 0 var(--main-color);
-  transition: box-shadow 0.5s ease-in-out;
+  
 }
 
 .card__like__button::after {
@@ -192,13 +201,13 @@
   width: 100%;
   height: 100%;
   background-color: var(--button-color);
-  transform: scaleX(0); /* Изначально невидим */
-  transform-origin: left; /* Начало масштабирования слева */
-  transition: transform 0.5s ease; /* Плавный переход для эффекта выезда */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease; 
 }
 
 .card__like__button:hover::after {
-  transform: scaleX(1); /* Масштабируем псевдоэлемент до его полной ширины */
+  transform: scaleX(1);
 }
 
 .desc_button {
@@ -214,6 +223,7 @@
   align-items: center;
   margin-inline-end: 27px;
   margin-block-end: 23px;
+  gap: 3px;
 }
 
 
@@ -371,28 +381,33 @@ dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
 
+
 @media (width <= 375px) {
   .header {
     max-width: 375px;
-    max-height: 327px;
-    margin-block-start: 100px;
   }
+
   .header__logo {
     font-size: 49px;
   }
+
   .header__title {
     font-size: 14px;
   }
+
   .main__width {
     max-width: 375px;
   }
+
   .main {
     margin-block-start: 51px;
   }
+
   .card__title {
     padding: 5px 0;
     width: 96%;
   }
+
   .save__button {
     gap: 17px;
     display: flex;
@@ -402,9 +417,11 @@ dialog::backdrop {
     max-width: 306px;
     margin-block-start: 5px;
   }
+
   .floppy-svg {
     width: 28px;
     height: 28px;
     margin-right: 0;
   }
+
 }

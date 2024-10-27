@@ -2,7 +2,7 @@
 
 :root {
     --main-font-family: 'Inter', sans-serif; /*подключение основного шрифта*/
-    --accent-font-family: 'PressStart2PRegular', sans-serif; /*подключение акцентного шрифта*/
+    --accent-font-family: 'PressStart2P', sans-serif; /*подключение акцентного шрифта*/
     --font-weight-name-card-light: 700; /*толщина шрифта (название карточки)*/
     --font-weight-description-card-light: 400; /*толщина шрифта (описание карточки)*/
     --theme-color: #FFFFFF; /*цвет темы*/
@@ -15,5 +15,7 @@
     --color-like: #FFFFFF; /*цвет текста кнопки лайк*/
     --color-heart-active: #FF0000; /*цвет сердца актив*/
     --stroke-color: #FFFFFF; /*цвет обводки для лейбл*/
+    --font-weight-title: 700; /*толщина вариативного шрифта заголовка карточки*/
+    --font-weight-text: 400; /*толщина вариативного шрифта параграфа*/
 }
 

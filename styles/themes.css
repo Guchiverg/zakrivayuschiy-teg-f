@@ -7,8 +7,6 @@
 
 
 :root.theme-light {
-    --main-font-family: 'Inter', sans-serif; /*подключение основного шрифта*/
-    --accent-font-family: 'PressStart2PRegular', sans-serif; /*подключение акцентного шрифта*/
     --font-weight-name-card-light: 700; /*толщина шрифта (название карточки)*/
     --font-weight-description-card-light: 400; /*толщина шрифта (описание карточки)*/
     --theme-color: #FFFFFF; /*цвет темы*/
@@ -19,13 +17,12 @@
     --button-color: #000; /*цвет для кнопки*/
     --color-heart: #000; /*цвет контура сердца*/
     --color-like: #FFFFFF; /*цвет текста кнопки лайк*/
-    --color-heart-active: #FF0000; /*цвет сердца актив*/
     --stroke-color: #FFFFFF; /*цвет обводки для лейбл*/
+    --font-weight-title: 700; /*толщина вариативного шрифта заголовка карточки*/
+    --font-weight-text: 400; /*толщина вариативного шрифта параграфа*/
 }
 
 :root.theme-dark {
-    --main-font-family: 'Inter', sans-serif; /*подключение основного шрифта*/
-    --accent-font-family: 'PressStart2PRegular', sans-serif; /*подключение акцентного шрифта*/
     --font-weight-name-card-light: 785; /*толщина шрифта (название карточки)*/
     --font-weight-description-card-light: 465; /*толщина шрифта (описание карточки)*/
     --theme-color: #000000; /*цвет фона бэкграунд*/
@@ -36,15 +33,14 @@
   --button-color: #00CC14; /*цвет для кнопки*/
   --color-heart: #00CC14; /*цвет контура сердца*/
   --color-like: #00CC14; /*цвет текста кнопки лайк*/
-  --color-heart-active: #FF0000; /*цвет сердца актив*/
   --stroke-color: #000000; /*цвет обводки для лейбл*/
+  --font-weight-title: 785; /*толщина вариативного шрифта заголовка карточки*/
+  --font-weight-text: 465; /*толщина вариативного шрифта параграфа*/
 }
 
 
 @media (prefers-color-scheme: dark) {
 :root {
-    --main-font-family: 'Inter', sans-serif; /*подключение основного шрифта*/
-    --accent-font-family: 'PressStart2PRegular', sans-serif; /*подключение акцентного шрифта*/
     --font-weight-name-card-light: 785; /*толщина шрифта (название карточки)*/
     --font-weight-description-card-light: 465; /*толщина шрифта (описание карточки)*/
     --theme-color: #000000; /*цвет фона бэкграунд*/
@@ -55,8 +51,9 @@
     --button-color: #00CC14; /*цвет для кнопки*/
     --color-heart: #00CC14; /*цвет контура сердца*/
     --color-like: #00CC14; /*цвет текста кнопки лайк*/
-    --color-heart-active: #FF0000; /*цвет сердца актив*/
     --stroke-color: #000000; /*цвет обводки для лейбл*/
+    --font-weight-title: 785; /*толщина вариативного шрифта заголовка карточки*/
+    --font-weight-text: 465; /*толщина вариативного шрифта параграфа*/
 }
   }
   
