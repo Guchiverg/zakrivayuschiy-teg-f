@@ -14,5 +14,6 @@
     --color-heart: #000; /*цвет контура сердца*/
     --color-like: #FFFFFF; /*цвет текста кнопки лайк*/
     --color-heart-active: #FF0000; /*цвет сердца актив*/
+    --stroke-color: #FFFFFF; /*цвет обводки для лейбл*/
 }
 
