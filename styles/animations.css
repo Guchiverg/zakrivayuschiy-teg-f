@@ -39,7 +39,7 @@
   }
   
 
-  .like-icon.is-liked .main-body { 
+  .like-icon.is-liked .main-body {
     fill: var(--color-heart-active);
     transition: fill 0.5s;
   }
@@ -62,30 +62,28 @@
   .like-icon.is-liked .sparks {
     fill: var(--color-heart-active);
     transition: fill 0.5s;
+    animation: sparkAnimation 0.3s ease-in 0.3s both;
 }
 
   .like-icon .sparks {
-    opacity: 0; 
+    opacity: 0;
   }
   
-  .like-icon.is-liked .sparks {
-    animation: sparkAnimation 0.3s ease-in 0.3s both; 
-  }
   
   @keyframes sparkAnimation {
     0% {
       opacity: 0;
     }
     50% {
-      opacity: 1; 
+      opacity: 1;
     }
     100% {
-      opacity: 0; 
+      opacity: 0;
     }
   }
   
 
-@keyframes animation  {
+@keyframes animation {
     0% {
         transform: translateX(0);
     }
@@ -94,7 +92,7 @@
     }
 }
 
-@keyframes scaleHeart  {
+@keyframes scaleHeart {
     0% {
         transform: scale(1);
     }

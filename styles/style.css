@@ -155,6 +155,7 @@
   border: none;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .card__button:focus-visible {
@@ -208,9 +209,7 @@
   margin-inline-end: 27px;
   margin-block-end: 23px;
 }
-.card__button {
-  cursor: pointer;
-}
+
 
 .save {
   display: flex;
@@ -235,7 +234,6 @@
 .icon-save {
   width: 21px;
   height: 21px;
-  color: red;
   color: var(--color-like);
   mix-blend-mode: difference;
 }
